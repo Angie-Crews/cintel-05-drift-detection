@@ -13,14 +13,16 @@
 
 ## Project Overview
 
-Author: Denise Case
+Author: Angie Crews
 
-Date: 2026 October
+Date: 2026 November
 
-This project introduces drift detection.
+This project introduces drift detection using Missouri State
+Expenditures travel data.
 
-The goal is to compare current measurements against a reference period
-and identify changes that exceed defined thresholds.
+The goal is to compare historical and recent travel spending
+to identify changes in spending patterns that may need
+further investigation.
 
 The project is configured in
 [pyproject.toml](pyproject.toml).
