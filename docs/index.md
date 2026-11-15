@@ -53,7 +53,37 @@ be justified for a production monitoring system.
 | Errors             |            2.3 |          6.3 |       +4.0 |
 | Total latency (ms) |          3,835 |        5,670 |     +1,835 |
 
-**All three metrics exceeded their configured thresholds.**
+## Threshold Experiment
+
+### Objective
+
+Test how increasing the errors drift threshold affects the detection results.
+
+### Modification
+
+Changed `ERRORS_DRIFT_THRESHOLD` from 2.0 to 5.0 in `src/cintel/drift_detector.py`.
+
+### Prediction
+
+Since the difference in average errors was 4.0, I predicted that increasing the threshold to 5.0 would prevent errors from being flagged for drift.
+
+### Results
+
+| Measurement | Original | Modified |
+|---|---|---|
+| Errors threshold | 2.0 | 5.0 |
+| Average errors difference | 4.0 | 4.0 |
+| Errors drift flag | True | False |
+| Requests drift flag | True | True |
+| Latency drift flag | True | True |
+
+The pipeline ran successfully after the modification. Errors were no longer flagged for drift, while requests and latency remained flagged.
+
+### What I Learned
+
+Increasing the threshold makes drift detection less sensitive. This experiment showed how threshold selection affects which changes are identified for further investigation.
+
+**With the original thresholds, all three metrics were flagged for drift. After increasing the errors threshold to 5.0, only requests and latency were flagged..**
 
 [View Drift Results](https://github.com/denisecase/cintel-05-drift-detection/blob/main/artifacts/drift_summary.csv)
 
