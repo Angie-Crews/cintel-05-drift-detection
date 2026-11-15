@@ -26,8 +26,10 @@ dependencies = [
     # REQ: External packages used by the project code.
     "datafun-toolkit", # WHY: Provides professional Python utilities for privacy-preserving logging.
     "marimo", # WHY: Enables reactive web app for app.py.
+    "matplotlib>=3.11.2",
     "polars[rtcompat]", # WHY: Fast DataFrame processing; rtcompat supports older CPUs.
-                        # OBS: If Polars causes issues, use pandas and adapt DataFrame operations.
+    # OBS: If Polars causes issues, use pandas and adapt DataFrame operations.
+    "pyarrow>=26.0.1",
     "scipy", # WHY: Statistical comparison using permutation tests.
 ]
 
@@ -42,7 +44,9 @@ dependencies = [
 #      and documenting the project without becoming runtime dependencies.
 
 dev = [
+    "ipykernel>=7.4.0",
     # REQ.DEV.DEPS: Standard tools for Python development and validation.
+    "pip>=26.3",
     "pytest",     # WHY: Run automated tests.
     "pytest-cov", # WHY: Measure and report test coverage.
     "ruff",       # WHY: Lint and format Python code.
