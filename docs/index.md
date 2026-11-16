@@ -43,7 +43,7 @@ Each dataset contains measurements of requests, errors, and total latency.
 
 My custom analysis uses Missouri State Expenditures data for fiscal years 2022 through 2026.
 
-**Source:** [Missouri State Expenditures](https://data.mo.gov/)
+**Source:** [Missouri State Expenditures](https://data.mo.gov/Government-Administration/2026-State-Expenditures/gndj-tfr3/about_data)
 
 The five annual CSV files are stored in the `data/` folder.
 
