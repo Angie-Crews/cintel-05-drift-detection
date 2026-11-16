@@ -34,6 +34,9 @@ A 10% threshold was used to identify potential drift in spending patterns.
 
 The project is configured in [pyproject.toml](pyproject.toml).
 
+The custom analysis is documented in the
+[Missouri Travel Spending Analysis Notebook](notebooks/missouri_travel_drift_analysis.ipynb).
+
 ## Data
 
 ### Original Project Data
